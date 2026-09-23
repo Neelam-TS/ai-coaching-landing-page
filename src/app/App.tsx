@@ -209,35 +209,6 @@ function VimeoEmbed() {
 
 // ─── Shared components ─────────────────────────────────────────────────────────
 
-// function CTAButton({
-//   children,
-//   large = false,
-//   className = "",
-// }: {
-//   children: React.ReactNode;
-//   large?: boolean;
-//   className?: string;
-// }) {
-//   return (
-//     <button
-//       className={[
-//         "inline-flex items-center justify-center gap-2 font-bold rounded-2xl transition-all duration-200",
-//         "hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2",
-//         large
-//           ? "px-8 py-4 text-[1.05rem] min-h-[56px]"
-//           : "px-6 py-3.5 text-[0.95rem] min-h-[48px]",
-//         "text-white shadow-lg hover:shadow-xl",
-//         className,
-//       ].join(" ")}
-//       style={{
-//         background: `linear-gradient(135deg, ${C.cerulean} 0%, ${C.turquoise} 100%)`,
-//         boxShadow: `0 4px 20px rgba(0,180,166,0.25)`,
-//       }}
-//     >
-//       {children}
-//     </button>
-//   );
-// }
 function CTAButton({
   children,
   large = false,
@@ -272,6 +243,7 @@ function CTAButton({
     </a>
   );
 }
+
 function SectionLabel({
   icon,
   children,
@@ -391,7 +363,7 @@ function HeroSection({ sentinelRef }: { sentinelRef: React.RefObject<HTMLDivElem
 
         <div className="flex flex-col items-center gap-2.5 pb-10">
           <CTAButton large href="https://highbridge.typeform.com/to/JDsTUgpz">
-            Start With a Free AI Gap Diagnostic <ArrowRight size={18} />
+           Free AI Gap Diagnostic <ArrowRight size={18} />
           </CTAButton>
           <p className="text-white/45 text-sm">Takes 30 seconds</p>
         </div>
@@ -458,9 +430,6 @@ const youDontKnow = [
     Which <strong>automation tools</strong> are actually worth learning?
   </>,
   <>
-    Which <strong>AI agents</strong> matter, and which are distractions?
-  </>,
-  <>
     How to <strong>vibe code</strong> with industry-standard tools such as{" "}
     <strong>Claude Code and OpenClaw</strong>?
   </>,
@@ -478,9 +447,6 @@ function ProblemSection() {
     >
       <div className="relative z-10 max-w-5xl mx-auto px-5">
         <div className="mb-10">
-          <SectionLabel icon={<AlertTriangle size={13} />} color="#E86B3A">
-            The Reality Check
-          </SectionLabel>
           <h2
             className="text-[2rem] md:text-[2.5rem] font-black leading-tight"
             style={{ color: C.navy, letterSpacing: "-0.02em" }}
@@ -672,7 +638,7 @@ const steps: Step[] = [
   {
     num: "03",
     badge: "After 24hrs · Implementation Plan",
-    title: "Implement your AI Opportunity",
+    title: "Done-for-You AI Agents",
     body: "Adopt your Personal AI Agents and Workflows and learn how to stop falling behind as AI moves faster.",
     icon: <Lightbulb size={22} color="#fff" strokeWidth={1.8} />,
     deliverables: [
@@ -709,7 +675,6 @@ function HowItWorksSection() {
     >
       <div className="relative z-10 max-w-5xl mx-auto px-5">
         <div className="mb-12">
-          <SectionLabel icon={<Zap size={13} />}>Simple Process</SectionLabel>
           <h2
             className="text-[2rem] md:text-[2.5rem] font-black"
             style={{ color: C.navy, letterSpacing: "-0.02em" }}
@@ -827,7 +792,7 @@ function HowItWorksSection() {
                         style={{ background: `linear-gradient(to bottom, ${C.cerulean}, ${C.turquoise})`, minWidth: 3 }}
                       />
                       <p className="text-[0.8rem] font-semibold leading-relaxed" style={{ color: C.cerulean }}>
-                        If there is a clear use case, get a personal AI implementation plan starting at $497.
+                        If there is a clear use case, get a personal AI implementation report starting at $497.
                       </p>
                     </div>
                   )}
@@ -839,8 +804,8 @@ function HowItWorksSection() {
 
         <div className="flex flex-col items-center text-center gap-3 mt-12">
           <CTAButton large href="https://highbridge.typeform.com/to/JDsTUgpz">
-            Start With a Free AI Gap Diagnostic <ArrowRight size={18} />
-          </CTAButton>
+    Free AI Gap Diagnostic <ArrowRight size={18} />
+  </CTAButton>
           <p className="text-sm" style={{ color: C.textMuted }}>
             Takes 30 seconds.
           </p>
@@ -858,8 +823,7 @@ const testimonials = [
     photo: marianaPhoto,
     text: (
       <>
-        I knew AI could help me, but I was overwhelmed by the tools online. The
-        coaching helped me identify where AI actually fits into my work, and{" "}
+        The coaching helped me identify where AI actually fits into my work, and{" "}
         <strong>I now save time on repetitive tasks every week.</strong>
       </>
     ),
@@ -873,8 +837,6 @@ const testimonials = [
           The personalised tools were very helpful — could use immediately for
           research, summaries, emails, and first drafts.
         </strong>{" "}
-        High Bridge did a great job clearly explaining what gaps I had and how
-        to address them.
       </>
     ),
   },
@@ -883,9 +845,7 @@ const testimonials = [
     photo: sofiaPhoto,
     text: (
       <>
-        I used to only use ChatGPT and Claude, but I now know better tools.{" "}
-        <strong>A big time saver, would highly recommend.</strong> Learning to
-        optimise AI workflows will be a game changer.
+        I used to only use ChatGPT and Claude, {" "}<strong>but I now know better tools.</strong>
       </>
     ),
   },
@@ -901,9 +861,6 @@ function TestimonialsSection() {
     >
       <div className="relative z-10 max-w-5xl mx-auto px-5">
         <div className="mb-10">
-          <SectionLabel icon={<Star size={13} />} color={C.turquoise}>
-            Client Results
-          </SectionLabel>
           <h2
             className="text-[2rem] md:text-[2.5rem] font-black"
             style={{ color: C.navy, letterSpacing: "-0.02em" }}
@@ -1087,7 +1044,6 @@ function WhyHBASection() {
     >
       <div className="relative z-10 max-w-5xl mx-auto px-5">
         <div className="mb-10">
-          <SectionLabel icon={<Users size={13} />}>Our Edge</SectionLabel>
           <h2
             className="text-[2rem] md:text-[2.5rem] font-black"
             style={{ color: C.navy, letterSpacing: "-0.02em" }}
@@ -1175,11 +1131,11 @@ function FinalCTASection() {
         </p>
 
         <div className="flex flex-col items-center gap-3">
-          <CTAButton large href="https://highbridge.typeform.com/to/JDsTUgpz">
-            Start With a Free AI Gap Diagnostic <ArrowRight size={18} />
-          </CTAButton>
-          <p className="text-white/40 text-sm">Takes 30 seconds.</p>
-        </div>
+  <CTAButton large href="https://highbridge.typeform.com/to/JDsTUgpz">
+    Free AI Gap Diagnostic <ArrowRight size={18} />
+  </CTAButton>
+  <p className="text-white/40 text-sm">Takes 30 seconds.</p>
+</div>
       </div>
     </section>
   );
